@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout Calculator</title>
+</head>
+<body>
+    <h1>Supermarket Checkout</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="items">Enter Items (A, B, C, D...):</label>
+        <input type="text" id="items" name="items" value="{{ items }}" required>
+        <button type="submit">Calculate Total</button>
+    </form>
+
+    {% if total is not None %}
+        <h2>Total Price: ₹{{ total }}</h2>
+    {% endif %}
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout Calculator</title>
+</head>
+<body>
+    <h1>🛒 Supermarket Checkout</h1>
+
+    <h3>📋 Product Price List:</h3>
+    <ul>
+        <li>🅰️  Item A — ₹50 each (Offer: 3 for ₹130)</li>
+        <li>🅱️  Item B — ₹30 each (Offer: 2 for ₹45)</li>
+        <li>🇨  Item C — ₹20 each</li>
+        <li>🇩  Item D — ₹15 each</li>
+    </ul>
+
+    <h3>💡 How to Test:</h3>
+    <p>
+        Enter the items as a string of letters, without spaces.<br>
+        Example: <br>
+        <strong>AAB</strong> = Item A, Item A, Item B <br>
+        <strong>AAABBD</strong> = 3xA, 2xB, 1xD <br>
+        <strong>CDBA</strong> = C, D, B, A.
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="items">Enter Items (A, B, C, D...):</label>
+        <input type="text" id="items" name="items" value="{{ items }}" required>
+        <button type="submit">Calculate Total</button>
+    </form>
+
+    {% if total is not None %}
+        <h2>Total Price: ₹{{ total }}</h2>
+    {% endif %}
+</body>
+</html>
