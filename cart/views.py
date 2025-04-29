@@ -9,3 +9,4 @@ def calculate_checkout(request):
         checkout = Checkout(items)
         total = checkout.total()
     return render(request, 'cart/checkout.html', {'total': total, 'items': items})
+
