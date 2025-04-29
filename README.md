@@ -12,7 +12,6 @@ This is a Django-based implementation of a **Supermarket Checkout System** that 
 - 💻 User-friendly web interface to calculate total price.
 
 ---
-
 ## ⚙️ Project Setup
 
 ### Prerequisites:
